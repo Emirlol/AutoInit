@@ -18,7 +18,7 @@ repositories {
 dependencies {
 	implementation(libs.symbolProcessingApi)
 	libs.bundles.kotlinpoet.get().map(::implementation)
-	compileOnly(project(":annotations"))
+	implementation(project(":annotations"))
 }
 
 publishing {
