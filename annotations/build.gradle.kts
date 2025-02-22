@@ -1,4 +1,3 @@
-
 import magik.createGithubPublication
 import magik.github
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -21,15 +20,6 @@ publishing {
 			artifactId = "init-annotation"
 			version = libs.versions.version.get()
 
-			pom {
-                withXml {
-                    asNode().appendNode("properties").apply {
-                        appendNode("maven.compiler.source", targetJavaVersion.toString())
-                        appendNode("maven.compiler.target", targetJavaVersion.toString())
-                    }
-                }
-            }
-
 			from(components["java"])
 		}
 	}
@@ -43,10 +33,14 @@ publishing {
 
 val targetJavaVersion = 21
 java {
-	sourceCompatibility = JavaVersion.VERSION_21
-	targetCompatibility = JavaVersion.VERSION_21
-	toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
 	withSourcesJar()
+}
+
+kotlin {
+	jvmToolchain {
+		languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+		vendor = JvmVendorSpec.ADOPTIUM
+	}
 }
 
 tasks {
