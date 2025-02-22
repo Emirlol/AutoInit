@@ -65,7 +65,7 @@ package ${ksFile!!.packageName.asString()}
  * 
  * **Note that having multiple references to this object will not reinitialize the features, as the initialization of kotlin objects is done only once.**
  */
-object $INIT_FILE_NAME {
+internal object $INIT_FILE_NAME {
 	init {
 		${classes.mapNotNull { it.qualifiedName?.asString() }.joinToString("\n\t\t") { it }}
 	}
