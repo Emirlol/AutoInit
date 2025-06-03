@@ -1,10 +1,7 @@
 [versions]
-version = "1.0.0"
-
-kotlin = "2.1.10" # https://github.com/JetBrains/kotlin/releases/
-ksp = "2.1.10-1.0.29" # https://github.com/google/ksp/releases
-kotlinpoet = "2.0.0" # https://github.com/square/kotlinpoet/releases/
-magik = "0.3.2" # https://github.com/GradleUp/magik/releases
+kotlin = "2.1.21" # https://github.com/JetBrains/kotlin/releases/
+ksp = "2.1.21-2.0.1" # https://github.com/google/ksp/releases
+kotlinpoet = "2.2.0" # https://github.com/square/kotlinpoet/releases/
 
 [libraries]
 symbolProcessingApi = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
@@ -20,4 +17,3 @@ kotlinpoet = [
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-magik = { id = "elect86.magik", version.ref = "magik"}

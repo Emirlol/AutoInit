@@ -1,7 +1,7 @@
-package me.rime.symbols.init
+package me.ancientri.symbols.init
 
 /**
- * Used by the InitProcessor in the symbols module to generate an initialization file that initializes all classes annotated with this annotation.
+ * Used by the InitProcessor in the symbols module to generate an Initializer file that initializes all classes annotated with this annotation.
  *
  * @param priority The priority of the class. Classes with a lower priority will be initialized first. Defaults to 0.
  */

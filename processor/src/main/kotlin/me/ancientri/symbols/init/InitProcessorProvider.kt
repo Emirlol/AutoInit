@@ -1,4 +1,4 @@
-package me.rime.symbols.init
+package me.ancientri.symbols.init
 
 import com.google.devtools.ksp.processing.SymbolProcessorEnvironment
 import com.google.devtools.ksp.processing.SymbolProcessorProvider
